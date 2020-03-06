@@ -5,12 +5,379 @@
 {% endblock %}
 
 {% block body %}
-    <div class="row">
-        <div class="col">
-            
-        </div>
+<section id="home"  style="padding: 5%;">
+    <div class="row" style="padding: 2%;" >
         <div class="col">
 
+            <div id="accordion">
+
+                <div class="card bg-success text-white">
+                  <div class="card-header">
+                    <a class="card-link text-white" data-toggle="collapse" href="#collapseOne">
+                     <b>Cluster 1</b> 
+                    </a>
+                  </div>
+                  <div id="collapseOne" class="collapse " data-parent="#accordion">
+                    <div class="card-body" style="background-color: white;color: black;">
+                        <table class="table table-striped">
+                            <thead>
+                              <tr>
+                                <th>From</th>
+                                <th>To</th>
+                               
+                              </tr>
+                            </thead>
+                            <tbody>
+                            {% for cluster in cluster1 %}
+                              <tr>
+                                  <td>{{ cluster.from_edge }}</td>
+                                  <td>{{ cluster.to_edge }}</td>
+                              </tr>
+                              {% endfor %}
+                            </tbody>
+                          </table>
+                    </div>
+                  </div>
+                </div>
+              
+                
+            
+        </div>
+        </div>
+        <div class="col">
+            <div class="card bg-success text-white">
+                <div class="card-header">
+                  <a class=" card-link text-white" data-toggle="collapse" href="#collapseTwo">
+                   <b>Cluster 2</b> 
+                  </a>
+                </div>
+                <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                  <div class="card-body " style="background-color: white;color: black;">
+                    <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>From</th>
+                            <th>To</th>
+                           
+                          </tr>
+                        </thead>
+                        <tbody>
+                            {% for cluster in cluster2 %}
+                            <tr>
+                                <td>{{ cluster.from_edge }}</td>
+                                <td>{{ cluster.to_edge }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                      </table>
+                  </div>
+                </div>
+              </div>
+            
+            
+            </div>
         </div>
     </div>
+
+  
+
+    <div class="row" style="padding: 2%;" >
+        <div class="col">
+
+            <div id="accordion">
+
+                <div class="card bg-primary text-white">
+                  <div class="card-header">
+                    <a class="card-link text-white" data-toggle="collapse" href="#collapseThree">
+                        <b>Cluster 3</b>                    
+                     </a>
+                  </div>
+                  <div id="collapseThree" class="collapse " data-parent="#accordion">
+                    <div class="card-body" style="background-color: white;color: black;">
+                        <table class="table table-striped">
+                            <thead>
+                              <tr>
+                                <th>From</th>
+                                <th>To</th>
+                               
+                              </tr>
+                            </thead>
+                            <tbody>
+                                {% for cluster in cluster3 %}
+                                <tr>
+                                    <td>{{ cluster.from_edge }}</td>
+                                    <td>{{ cluster.to_edge }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                          </table>
+                    </div>
+                  </div>
+                </div>
+              
+                
+            
+        </div>
+        </div>
+        <div class="col">
+            <div class="card bg-primary text-white">
+                <div class="card-header">
+                  <a class=" card-link text-white" data-toggle="collapse" href="#collapseFour">
+                    <b>Cluster 4</b>                  
+                 </a>
+                </div>
+                <div id="collapseFour" class="collapse" data-parent="#accordion">
+                  <div class="card-body" style="background-color: white;color: black;">
+                    <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>From</th>
+                            <th>To</th>
+                           
+                          </tr>
+                        </thead>
+                        <tbody>
+                            {% for cluster in cluster4 %}
+                            <tr>
+                                <td>{{ cluster.from_edge }}</td>
+                                <td>{{ cluster.to_edge }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                      </table>
+                  </div>
+                </div>
+              </div>
+            
+            
+            </div>
+        </div>
+    </div>
+
+   
+
+    <div class="row"  style="padding: 2%;">
+        <div class="col">
+
+            <div id="accordion">
+
+                <div class="card bg-warning text-white">
+                  <div class="card-header">
+                    <a class="card-link text-white" data-toggle="collapse" href="#collapseFive">
+                        <b>Cluster 5</b> 
+                    </a>
+                  </div>
+                  <div id="collapseFive" class="collapse " data-parent="#accordion">
+                    <div class="card-body" style="background-color: white;color: black;">
+                        <table class="table table-striped">
+                            <thead>
+                              <tr>
+                                <th>From</th>
+                                <th>To</th>
+                               
+                              </tr>
+                            </thead>
+                            <tbody>
+                                {% for cluster in cluster5 %}
+                                <tr>
+                                    <td>{{ cluster.from_edge }}</td>
+                                    <td>{{ cluster.to_edge }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                          </table>
+                    </div>
+                  </div>
+                </div>
+              
+                
+            
+        </div>
+        </div>
+        <div class="col">
+            <div class="card bg-warning text-white">
+                <div class="card-header">
+                  <a class=" card-link text-white" data-toggle="collapse" href="#collapseSix">
+                    <b>Cluster 6</b> 
+                  </a>
+                </div>
+                <div id="collapseSix" class="collapse" data-parent="#accordion">
+                  <div class="card-body" style="background-color: white;color: black;">
+                    <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>From</th>
+                            <th>To</th>
+                           
+                          </tr>
+                        </thead>
+                        <tbody>
+                            {% for cluster in cluster6 %}
+                            <tr>
+                                <td>{{ cluster.from_edge }}</td>
+                                <td>{{ cluster.to_edge }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                      </table>
+                  </div>
+                </div>
+              </div>
+            
+            
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div class="row" style="padding: 2%;" >
+        <div class="col">
+
+            <div id="accordion">
+
+                <div class="card bg-danger text-white">
+                  <div class="card-header">
+                    <a class="card-link text-white" data-toggle="collapse" href="#collapseSeven">
+                        <b>Cluster 7</b> 
+                    </a>
+                  </div>
+                  <div id="collapseSeven" class="collapse " data-parent="#accordion">
+                    <div class="card-body" style="background-color: white;color: black;">
+                        <table class="table table-striped">
+                            <thead>
+                              <tr>
+                                <th>From</th>
+                                <th>To</th>
+                               
+                              </tr>
+                            </thead>
+                            <tbody>
+                                {% for cluster in cluster7 %}
+                                <tr>
+                                    <td>{{ cluster.from_edge }}</td>
+                                    <td>{{ cluster.to_edge }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                          </table>
+                    </div>
+                  </div>
+                </div>
+              
+                
+            
+        </div>
+        </div>
+        <div class="col">
+            <div class="card bg-danger text-white">
+                <div class="card-header">
+                  <a class=" card-link text-white" data-toggle="collapse" href="#collapseEight">
+                    <b>Cluster 8</b> 
+                  </a>
+                </div>
+                <div id="collapseEight" class="collapse" data-parent="#accordion">
+                  <div class="card-body" style="background-color: white;color: black;">
+                    <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>From</th>
+                            <th>To</th>
+                           
+                          </tr>
+                        </thead>
+                        <tbody>
+                            {% for cluster in cluster8 %}
+                            <tr>
+                                <td>{{ cluster.from_edge }}</td>
+                                <td>{{ cluster.to_edge }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                      </table>
+                  </div>
+                </div>
+              </div>
+            
+            
+            </div>
+        </div>
+    </div>
+
+  
+
+    <div class="row" style="padding: 2%;" >
+        <div class="col">
+
+            <div id="accordion">
+
+                <div class="card bg-info text-white">
+                  <div class="card-header">
+                    <a class="card-link text-white" data-toggle="collapse" href="#collapseNine">
+                        <b>Cluster 9</b> 
+                    </a>
+                  </div>
+                  <div id="collapseNine" class="collapse " data-parent="#accordion">
+                    <div class="card-body" style="background-color: white;color: black;">
+                        <table class="table table-striped">
+                            <thead>
+                              <tr>
+                                <th>From</th>
+                                <th>To</th>
+                               
+                              </tr>
+                            </thead>
+                            <tbody>
+                                {% for cluster in cluster9 %}
+                                <tr>
+                                    <td>{{ cluster.from_edge }}</td>
+                                    <td>{{ cluster.to_edge }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                          </table>
+                    </div>
+                  </div>
+                </div>
+              
+                
+            
+        </div>
+        </div>
+        <div class="col">
+            <div class="card bg-info text-white">
+                <div class="card-header">
+                  <a class=" card-link text-white" data-toggle="collapse" href="#collapseTen">
+                    <b>Cluster 10</b> 
+                  </a>
+                </div>
+                <div id="collapseTen" class="collapse" data-parent="#accordion">
+                  <div class="card-body" style="background-color: white;color: black;">
+                    <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>From</th>
+                            <th>To</th>
+                           
+                          </tr>
+                        </thead>
+                        <tbody>
+                            {% for cluster in cluster10 %}
+                            <tr>
+                                <td>{{ cluster.from_edge }}</td>
+                                <td>{{ cluster.to_edge }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                      </table>
+                  </div>
+                </div>
+              </div>
+            
+            
+            </div>
+        </div>
+    </div>   
+</section>
+
 {% endblock %}
