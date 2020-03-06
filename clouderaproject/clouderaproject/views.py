@@ -2,6 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from nodes.models import Node
 from edges.models import Edge
+import pickle
 
 def home(request):
     cluster1 = Edge.objects.filter(cluster = 1)
@@ -13,9 +14,11 @@ def home(request):
     cluster7 = Edge.objects.filter(cluster = 7)
     cluster8 = Edge.objects.filter(cluster = 8)
     cluster9 = Edge.objects.filter(cluster = 9)
-    cluster10 = Edge.objects.filter(cluster = 10)
-    
+    cluster10 = Edge.objects.filter(cluster = 0)
 
     return render(request, 'home.html', {'cluster1' : cluster1, 'cluster2':cluster2, 'cluster3':cluster3,
                                         'cluster4':cluster4, 'cluster5':cluster5, 'cluster6':cluster6,
                                         'cluster7':cluster7, 'cluster8':cluster8, 'cluster9': cluster9, 'cluster10':cluster10})
+
+def analysis(request):
+    return render(request, 'analysis.html')

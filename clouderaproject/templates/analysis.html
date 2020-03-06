@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}
+    Analysis
+{% endblock %}
+
+{% block body %}
+    <div class="container mt-4">
+        <center><h3 class="text-muted">The graph for all the users</h3></center>
+        <img src="{% static 'graph.png' %}" alt="Graph" class="img-fluid" width="50%" height="50%">
+
+        <hr style="height: 20px;"/>
+        <center><h3 class="text-muted">The elbow method graph for optimum number of clusters</h3></center>
+        <img src="{% static 'elbow.png' %}" alt="Graph" class="img-fluid" width="50%" height="50%">
+        
+        <hr style="height: 20px;"/>
+        <center><h3 class="text-muted">The clusters with centroids (For k = 10)</h3></center>
+        <img src="{% static 'clusters.png' %}" alt="Graph" class="img-fluid" width="50%" height="50%">
+
+        <hr style="height: 20px;"/>
+
+        <div class = "row">
+            <div class="col">
+                <div class="jumbotron">
+                    <h3>The average silhouette score for 10 clusters is  0.4654020324588176</h3>
+                </div>
+            </div>
+            <div class="col">
+                <div class="jumbotron">
+                    <h3>The average silhouette score for 9 clusters is  0.45328698421</h3>
+                </div>
+            </div>
+    </div>
+{% endblock %}
